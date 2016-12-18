@@ -9,12 +9,19 @@ Say you want to pass the values of the variables `strFirstName` and `strLastName
 ### Calling side
 On the calling side use an instance of the class `NamedValues`, stuff it with the values and get the serialized result via the property 'AsString':
 
-    With New NamedValues
-      .Add "FirstName", strFirstName
-      .Add "LastName", strLastName
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
 
-      DoCmd.OpenForm "TargetForm", OpenArgs:=.AsString   
-    End With
+```vbnet
+With New NamedValues
+  .Add "FirstName", strFirstName
+  .Add "LastName", strLastName
+
+  DoCmd.OpenForm "TargetForm", OpenArgs:=.AsString   
+End With
+```
 
 Remark: This is just the most dense version of getting things done. For real code I would recommend to invest more in maintainability.
 
