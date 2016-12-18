@@ -5,8 +5,8 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
-Private mp_ValueSeperator As String
-Private mp_KeyValueSeperator As String
+Private mp_ValueSeparator As String
+Private mp_KeyValueSeparator As String
 
 Private m_Values As VBA.Collection
 
@@ -18,8 +18,8 @@ Private m_Values As VBA.Collection
 
 Private Sub Class_Initialize()
    Set m_Values = New VBA.Collection
-   mp_ValueSeperator = ";"
-   mp_KeyValueSeperator = "="
+   mp_ValueSeparator = ";"
+   mp_KeyValueSeparator = "="
 End Sub
 
 Private Sub Class_Terminate()
@@ -36,22 +36,22 @@ Public Property Get Self() As NamedValues
    Set Self = Me
 End Property
 
-Public Property Let ValueSeperator(ByVal Value As String)
+Public Property Let ValueSeparator(ByVal Value As String)
    If Len(Value) > 0 Then
-      mp_ValueSeperator = Value
+      mp_ValueSeparator = Value
    End If
 End Property
-Public Property Get ValueSeperator() As String
-   ValueSeperator = mp_ValueSeperator
+Public Property Get ValueSeparator() As String
+   ValueSeparator = mp_ValueSeparator
 End Property
 
-Public Property Let KeyValueSeperator(ByVal Value As String)
+Public Property Let KeyValueSeparator(ByVal Value As String)
    If Len(Value) > 0 Then
-      mp_KeyValueSeperator = Value
+      mp_KeyValueSeparator = Value
    End If
 End Property
-Public Property Get KeyValueSeperator() As String
-   KeyValueSeperator = mp_KeyValueSeperator
+Public Property Get KeyValueSeparator() As String
+   KeyValueSeparator = mp_KeyValueSeparator
 End Property
 
 Public Property Get Item(ByVal Key As String) As String
@@ -76,23 +76,23 @@ Public Property Let AsString(ByVal NewString As String)
    Set m_Values = Nothing
    Set m_Values = New Collection
    
-   PosLastValueSep = 1 - Len(mp_ValueSeperator)
-   PosKeyValueSep = InStr(1, NewString, mp_KeyValueSeperator)
+   PosLastValueSep = 1 - Len(mp_ValueSeparator)
+   PosKeyValueSep = InStr(1, NewString, mp_KeyValueSeparator)
    Do While PosKeyValueSep > 0
       Set kvp = New KeyValuePair
-      KeyStart = PosLastValueSep + Len(mp_ValueSeperator)
+      KeyStart = PosLastValueSep + Len(mp_ValueSeparator)
       kvp.Key = Mid$(NewString, KeyStart, PosKeyValueSep - KeyStart)
-      PosValueSep = InStr(PosKeyValueSep, NewString, mp_ValueSeperator)
+      PosValueSep = InStr(PosKeyValueSep, NewString, mp_ValueSeparator)
       If PosValueSep > 0 Then
-         kvp.Value = Mid$(NewString, PosKeyValueSep + Len(mp_KeyValueSeperator), PosValueSep - PosKeyValueSep - Len(mp_KeyValueSeperator))
+         kvp.Value = Mid$(NewString, PosKeyValueSep + Len(mp_KeyValueSeparator), PosValueSep - PosKeyValueSep - Len(mp_KeyValueSeparator))
       Else
-         kvp.Value = Mid$(NewString, PosKeyValueSep + Len(mp_KeyValueSeperator))
+         kvp.Value = Mid$(NewString, PosKeyValueSep + Len(mp_KeyValueSeparator))
       End If
       m_Values.Add kvp, kvp.Key
       Set kvp = Nothing
       If PosValueSep > 0 Then
          PosLastValueSep = PosValueSep
-         PosKeyValueSep = InStr(PosLastValueSep + 1, NewString, mp_KeyValueSeperator)
+         PosKeyValueSep = InStr(PosLastValueSep + 1, NewString, mp_KeyValueSeparator)
       Else
          PosKeyValueSep = 0
       End If
@@ -103,10 +103,10 @@ Public Property Get AsString() As String
    Dim kvp As KeyValuePair
    
    For Each kvp In m_Values
-      strTemp = strTemp & kvp.Key & mp_KeyValueSeperator & kvp.Value & mp_ValueSeperator
+      strTemp = strTemp & kvp.Key & mp_KeyValueSeparator & kvp.Value & mp_ValueSeparator
    Next kvp
    If Len(strTemp) > 0 Then
-      AsString = Left$(strTemp, Len(strTemp) - Len(mp_ValueSeperator))
+      AsString = Left$(strTemp, Len(strTemp) - Len(mp_ValueSeparator))
    Else
       AsString = ""
    End If
