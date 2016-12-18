@@ -184,5 +184,5 @@ This sample is licensed under the [MIT License](LICENSE).
 
 
 ## CNamedValues
-The first version of this class appeared back in 2004 in my talk "Praxiseinsatz von benutzerdefinierten Klassen in Microsoft Access" at the [AEK7](http://donkarl.com/AEK/Archiv/AEK7.htm) (Access Entwickler Konferenz - Access Developer's Conference) in Nurnberg, Germany under the name `CNamedValues`. Since in the meantime I refrain from using prefixes depending on the type of modules, it now has the name `NamedValues`. If I just would be clever, it maybe would have the name `SerializableDictionary` or alike.
+The first version of this class appeared back in 2004 in my talk "Praxiseinsatz von benutzerdefinierten Klassen in Microsoft Access" at the [AEK7](http://donkarl.com/AEK/Archiv/AEK7.htm) ([Access Entwickler Konferenz](http://www.donkarl.com?AEK) - Access Developer's Conference) in Nurnberg, Germany under the name `CNamedValues`. Since in the meantime I refrain from using prefixes depending on the type of modules, it now has the name `NamedValues`. If I just would be clever, it maybe would have the name `SerializableDictionary` or alike.
 The full blown text for this talk (in German) can be downloaded from the [conference website](http://donkarl.com/Downloads/AEK/) (scroll down to AEK 7).
