@@ -9,11 +9,6 @@ Say you want to pass the values of the variables `strFirstName` and `strLastName
 ### Calling side
 On the calling side use an instance of the class `NamedValues`, stuff it with the values and get the serialized result via the property 'AsString':
 
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
 ```vbnet
 With New NamedValues
   .Add "FirstName", strFirstName
@@ -28,12 +23,14 @@ Remark: This is just the most dense version of getting things done. For real cod
 ### Receiving side
 On the receiving side (say a form) you use another instance of `NamedValues`, pass the serialized string to its property `AsString` and ask the class to give you back the parts:
 
-    With New NamedValues
-      .AsString = Nz(Me.OpenArgs, vbNullString)
-      
-      Me.txtFirstName.Value = .Item("FirstName")
-      Me.txtLastName.Value = .Item("LastName")
-    End With
+```vbnet
+With New NamedValues
+  .AsString = Nz(Me.OpenArgs, vbNullString)
+  
+  Me.txtFirstName.Value = .Item("FirstName")
+  Me.txtLastName.Value = .Item("LastName")
+End With
+```
 
 ## Getting Started
 
