@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<db.properties>
+	<property name="Name" value="D:\Projects\VBA.NamedValues\NamedValues.accdb" />
+	<property name="Connect" value="" />
+	<property name="Transactions" value="True" />
+	<property name="Updatable" value="True" />
+	<property name="CollatingOrder" value="1033" />
+	<property name="QueryTimeout" value="60" />
+	<property name="Version" value="12.0" />
+	<property name="RecordsAffected" value="0" />
+	<property name="ReplicaID" value="" />
+	<property name="DesignMasterID" value="" />
+	<property name="Connection" value="(n/a)" />
+	<property name="ANSI Query Mode" value="0" />
+	<property name="Themed Form Controls" value="1" />
+	<property name="Use Microsoft Access 2007 compatible cache" value="0" />
+	<property name="Clear Cache on Close" value="0" />
+	<property name="Never Cache" value="0" />
+	<property name="AccessVersion" value="09.50" />
+	<property name="NavPane Category" value="0" />
+	<property name="Show Navigation Pane Search Bar" value="1" />
+	<property name="UseMDIMode" value="1" />
+	<property name="ShowDocumentTabs" value="True" />
+	<property name="Picture Property Storage Format" value="0" />
+	<property name="WebDesignMode" value="0" />
+	<property name="CheckTruncatedNumFields" value="1" />
+	<property name="Theme Resource Name" value="Office Theme" />
+	<property name="HasOfflineLists" value="70" />
+	<property name="ProjVer" value="119" />
+	<property name="NavPane Closed" value="1" />
+	<property name="NavPane Width" value="215" />
+	<property name="NavPane View By" value="0" />
+	<property name="NavPane Sort By" value="1" />
+	<property name="AppTitle" value="NamedValues" />
+	<property name="StartUpShowDBWindow" value="False" />
+	<property name="StartUpShowStatusBar" value="True" />
+	<property name="AllowShortcutMenus" value="True" />
+	<property name="AllowFullMenus" value="True" />
+	<property name="AllowBuiltInToolbars" value="True" />
+	<property name="AllowToolbarChanges" value="True" />
+	<property name="AllowSpecialKeys" value="True" />
+	<property name="UseAppIconForFrmRpt" value="False" />
+	<property name="AllowDatasheetSchema" value="True" />
+	<property name="DesignWithData" value="True" />
+	<property name="StartUpForm" value="frmSource" />
+	<property name="Show Values Limit" value="1000" />
+	<property name="Show Values in Indexed" value="1" />
+	<property name="Show Values in Non-Indexed" value="1" />
+	<property name="Show Values in Remote" value="0" />
+	<property name="Auto Compact" value="0" />
+	<databases.userDefined>
+		<property name="Name" value="UserDefined" />
+		<property name="Owner" value="admin" />
+		<property name="UserName" value="admin" />
+		<property name="Permissions" value="1048575" />
+		<property name="AllPermissions" value="1048575" />
+		<property name="Container" value="Databases" />
+		<property name="DateCreated" value="18.12.2016 21:30:46" />
+		<property name="LastUpdated" value="18.12.2016 21:30:46" />
+		<property name="ReplicateProject" value="True" />
+	</databases.userDefined>
+</db.properties>

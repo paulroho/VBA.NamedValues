@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<references>
+	<reference name="VBA" version="4.1" kind="TypeLib" isBuiltIn="True" isBroken="False">
+		<guid>{000204EF-0000-0000-C000-000000000046}</guid>
+		<fullPath>C:\PROGRA~2\COMMON~1\MICROS~1\VBA\VBA7\VBE7.DLL</fullPath>
+	</reference>
+	<reference name="Access" version="9.0" kind="TypeLib" isBuiltIn="True" isBroken="False">
+		<guid>{4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}</guid>
+		<fullPath>C:\Program Files (x86)\Microsoft Office\Office14\MSACC.OLB</fullPath>
+	</reference>
+</references>
