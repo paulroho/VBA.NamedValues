@@ -125,6 +125,7 @@ You might want to change the default (semicolon `;`) if you have to pass a semic
 For `NamedValues` to work properly, you have to make sure,
 * that the string specified as the `ValueSeparator` never appears in your data.
 * that `ValueSeparator` is always different from (and no subset of) [KeyValueSeparator](#keyvalueseparator).
+
 In the current version there is no check for all this.
 
 #### KeyValueSeparator
