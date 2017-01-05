@@ -46,7 +46,7 @@ For an easy kick start there is a sample as a Microsoft Access Database from thi
 ## API Guide
 
 ### Instantiating `NamedValues`
-You can instantiate `NamedValues` as every othe class in VBA via the `New` keyword and assign it to a variable:
+You can instantiate `NamedValues` as every other class in VBA via the `New` keyword and assign it to a variable:
 
 ```vbnet
 Dim Nv As NamedValues
